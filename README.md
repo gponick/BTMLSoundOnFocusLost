@@ -21,7 +21,7 @@ Setting | Type | Default | Description
 
 ## Special Thanks
 
-HBS, @Mpstark, @Morphyum, @janxous
+HBS, @Mpstark, @Morphyum, @janxious, @CWolf
 
 
 ## Maintainer Notes: New HBS Patch Instructions
