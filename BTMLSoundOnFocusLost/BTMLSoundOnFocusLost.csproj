@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8624264-5ADB-4034-82A5-7CC2C650D47C}</ProjectGuid>
+    <ProjectGuid>{6b6c1c37-6bac-44ea-ba92-926ab78511d4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BTMLSoundOnFocusLost</RootNamespace>
