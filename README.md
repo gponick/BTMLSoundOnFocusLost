@@ -1,5 +1,7 @@
 # BTMLSoundOnFocusLost
-BattleTech Mod (using [BTML](https://github.com/Mpstark/BattleTechModLoader) and [ModTek](https://github.com/Mpstark/ModTek)) that keeps the sound going in the background when you tab out. I got super annoyed at not hearing the masterpiece that is Jon Everist's works while chatting or modding. 
+BattleTech Mod (using [BTML](https://github.com/Mpstark/BattleTechModLoader) and [ModTek](https://github.com/Mpstark/ModTek)) that keeps the sound going in the background when you tab out. I got super annoyed at not hearing the masterpiece that is [Jon Everist](http://everistsound.com/)'s works while chatting or modding. Seriously, go listen! [NOW!](https://open.spotify.com/artist/4DqJvNq10EAyXLdTIFoMK2).
+
+Also I guess you can hear your mechs get stomped into the ground while alt-tabbed. There's that too.
 
 ## Download
 Downloads can be found on [Github](https://github.com/gponick/BTMLSoundOnFocusLost/releases) 
