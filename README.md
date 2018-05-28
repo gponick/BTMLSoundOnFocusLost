@@ -3,6 +3,8 @@ BattleTech Mod (using [BTML](https://github.com/Mpstark/BattleTechModLoader) and
 
 Also I guess you can hear your mechs get stomped into the ground while alt-tabbed. There's that too.
 
+Also has a keybind. See Keybinds section.
+
 ## Download
 Downloads can be found on [Github](https://github.com/gponick/BTMLSoundOnFocusLost/releases) 
 
@@ -18,6 +20,10 @@ Downloads can be found on [Github](https://github.com/gponick/BTMLSoundOnFocusLo
 Setting | Type | Default | Description
 --- | --- | --- | ---
 `enableSoundOnLostFocus` | `bool` | `true` | should sound be enabled when focus is lost
+
+## Keybinds
+
+The default keybind is `O` (that's "oh" not "zero")
 
 ## Special Thanks
 
