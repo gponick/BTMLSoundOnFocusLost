@@ -2,6 +2,10 @@
 using System.Reflection;
 using Harmony;
 using Newtonsoft.Json;
+using BattleTech;
+using BattleTech.UI;
+using InControl;
+
 
 namespace BTMLSoundOnFocusLost
 {
@@ -9,6 +13,7 @@ namespace BTMLSoundOnFocusLost
     {
         internal static Settings ModSettings = new Settings();
         internal static string ModDirectory;
+
         public static void Init(string directory, string settingsJSON)
         {
             var harmony = HarmonyInstance.Create("com.gponick.BTMLSoundOnFoucsLost");

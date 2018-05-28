@@ -1,18 +1,4 @@
-﻿using System.Collections.Generic;
-using BattleTech;
-using BattleTech.UI;
-using Harmony;
-using UnityEngine;
-using static BTMLSoundOnFocusLost.BTMLSoundOnFocusLost;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using fastJSON;
-using HBS;
-using HBS.Logging;
-using UnityEngine;
+﻿using Harmony;
 
 namespace BTMLSoundOnFocusLost
 {
