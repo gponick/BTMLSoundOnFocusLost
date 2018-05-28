@@ -3,6 +3,17 @@ using BattleTech.UI;
 using Harmony;
 using InControl;
 using System;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using BattleTech.Data;
+using BattleTech.UI.Tooltips;
+using HBS;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace BTMLSoundOnFocusLost
 {
@@ -21,6 +32,21 @@ namespace BTMLSoundOnFocusLost
         }
 
         public static PlayerAction SoundOnFocusAction;
+        
+        [HarmonyPatch(typeof(BattleTech.UI.UIManager), "Update")]
+        public static class UIManager_Patch { 
+            public static bool Prefix(UIManager __instance)
+            {
+                if ( SoundOnFocusAction.WasReleased)
+                {
+                    Logger.LogLine($"Toggling sound on / off without focus, from: {BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus}");
+                    BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus = !BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus;
+                    Logger.LogLine($"It's now: {BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus}");
+                }
+                return true;
+            }
+        }
+
 
         [HarmonyPatch(typeof(DynamicActions), "CreateWithDefaultBindings")]
         public static class DynamicActionsCreateWithDefaultBindingsPatch
@@ -35,32 +61,6 @@ namespace BTMLSoundOnFocusLost
                     SoundOnFocusAction = adapter.CreatePlayerAction("Toggle Focus Sound");
                     SoundOnFocusAction.AddDefaultBinding(Key.O);
                     Logger.LogLine("Keybind added");
-                }
-                catch (Exception e)
-                {
-                    Logger.LogError(e);
-                }
-            }
-        }
-
-        [HarmonyPatch(typeof(CombatSelectionHandler), "ProcessInput")]
-        public static class CombatSelectionHandlerProcessInputPatch
-        {
-            public static void Prefix(CombatSelectionHandler __instance)
-            {
-                try
-                {
-                    if (SoundOnFocusAction == null || !SoundOnFocusAction.HasChanged || !SoundOnFocusAction.IsPressed)
-                    {
-                        return;
-                    }
-
-                    Logger.LogLine($"Toggling sound on / off without focus, from: {BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus}");
-                    BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus = !BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus;
-                    Logger.LogLine($"It's now: {BTMLSoundOnFocusLost.ModSettings.EnableSoundOnLostFocus}");
-
-
-
                 }
                 catch (Exception e)
                 {
