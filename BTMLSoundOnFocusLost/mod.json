@@ -2,7 +2,7 @@
   "Name": "BTMLSoundOnFocusLost",
   "Enabled": true,
 
-  "Version": "0.1.1",
+  "Version": "0.1.2",
 
   "Author": "gponick",
   "Website": "https://github.com/gponick/BTMLSoundOnFocusLost",
@@ -11,7 +11,7 @@
   "DLLEntryPoint": "BTMLSoundOnFocusLost.BTMLSoundOnFocusLost.Init",
   "DependsOn": [],
   "ConflictsWith": [],
-  "BattletechVersion": "1.04",
+  "BattletechVersion": "1.1.0-301R",
 
   "Settings": {
     "enableSoundOnLostFocus": true
