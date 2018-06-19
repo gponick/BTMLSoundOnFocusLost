@@ -11,6 +11,7 @@
   "DLLEntryPoint": "BTMLSoundOnFocusLost.BTMLSoundOnFocusLost.Init",
   "DependsOn": [],
   "ConflictsWith": [],
+  "BattletechVersion": "1.04",
 
   "Settings": {
     "enableSoundOnLostFocus": true
